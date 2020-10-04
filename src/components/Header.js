@@ -20,7 +20,7 @@ export default function Header() {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/products">Product</Link>
+              <Link to="/products">Products</Link>
             </li>
             {user.token && (
               <li>

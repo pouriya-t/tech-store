@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function About() {
+  const [height, setHeight] = useState(0);
+  useEffect(() => {
+    window.addEventListener("hello from about", () => {
+      setHeight(window.pageYOffset);
+    });
+    // return () => {
+    //   console.log("about unmounted");
+
+    //   return window.removeEventListener("scroll", () => {});
+    // };
+  });
+
   return (
     <section className="section about-section">
       <h1 className="section-title">about us</h1>
+      <input type="hidden" value={height}/>
       <p>
         I'm baby bitters crucifix taiyaki mumblecore helvetica keffiyeh cloud
         bread coloring book put a bird on it affogato pour-over green juice.

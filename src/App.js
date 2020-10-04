@@ -9,16 +9,19 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
+// components
 import Header from "./components/Header";
 import Alert from "./components/Alert";
 import PrivateRoute from "./components/PrivateRoute";
-// components
+import ScrollButton from './components/ScrollButton';
+
 
 export default function App() {
   return (
     <Router>
       <Header />
       <Alert />
+      <ScrollButton />
       <Switch>
         <Route exact path="/">
           <Home />
